@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from 'next/script';
 
+import ReactGA from "react-ga4";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,6 +20,9 @@ export const metadata = {
 };
 
 
+ReactGA.initialize("G-LQQGW3B1TV");
+
+ReactGA.send({ hitType: "pageview", page: window.location.pathname });
 
 
 export default function RootLayout({ children }) {
