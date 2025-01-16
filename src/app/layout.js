@@ -25,7 +25,10 @@ export default function RootLayout({ children }) {
 
   ReactGA.initialize("G-LQQGW3B1TV");
 
-  ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  if (typeof window !== 'undefined') {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }
+
   return (
     <html lang="en">
       <head>
