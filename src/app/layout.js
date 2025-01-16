@@ -20,12 +20,12 @@ export const metadata = {
 };
 
 
-ReactGA.initialize("G-LQQGW3B1TV");
-
-ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-
 
 export default function RootLayout({ children }) {
+
+  ReactGA.initialize("G-LQQGW3B1TV");
+
+  ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   return (
     <html lang="en">
       <head>
